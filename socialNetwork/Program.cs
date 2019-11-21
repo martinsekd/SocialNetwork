@@ -32,10 +32,10 @@ namespace socialNetwork
 
 
             //var user2 = Builders<User>.Filter.Eq("name", "Kim Hansen");
-            var user3 = users.
-            var update = Builders<User>.Update.Push("post", post);
+            //var user3 = users.
+            //var update = Builders<User>.Update.Push("post", post);
 
-            users.UpdateOne(user2, update);
+            //users.UpdateOne(user2, update);
             
             //Builders<User>.Update.Push()
             //users.UpdateOne("{name : 'Kim Hansen'}", "{$push: {po}");
