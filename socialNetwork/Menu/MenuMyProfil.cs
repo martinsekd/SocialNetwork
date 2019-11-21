@@ -49,7 +49,16 @@ namespace socialNetwork.Menu
                         Console.Write("Skriv Post: ");
                         string postContent = Console.ReadLine();
 
-                        // lav en post
+                        try
+                        {
+                            // lav en post
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Fejled I at skrive til database");
+                            Console.WriteLine("Tryk enter for at forsætte");
+                            Console.ReadLine();
+                        }
                         break;
 
                     case "3":
