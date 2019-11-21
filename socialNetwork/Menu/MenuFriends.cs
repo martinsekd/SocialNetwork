@@ -12,7 +12,7 @@ namespace socialNetwork.Menu
 
         public MenuFriends()
         {
-            MenuValg = 
+            MenuValg = "mainMenu";
             Runner = true;
         }
 
