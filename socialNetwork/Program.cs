@@ -1,5 +1,6 @@
 ﻿using MongoDB.Driver;
 using System;
+using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson;
 
 namespace socialNetwork
@@ -16,17 +17,28 @@ namespace socialNetwork
             users = database.GetCollection<User>("User");
             posts = database.GetCollection<Post>("Post");
 
-            var user = new User();
-            user.age = 20;
-            user.gender = "Mand";
-            user.name = "Kim Hansen";
+            //var user = new User();
+            //user.age = 20;
+            //user.gender = "Mand";
+            //user.name = "Kim Hansen";
 
-            users.InsertOne(user);
+            //users.InsertOne(user);
 
-            //var user2 = Builders<BsonDocument>.Filter.Eq("name": "Kim Hansen");
+            var post = new Post();
+            post.id = ObjectId.GenerateNewId((int) DateTime.Now.ToFileTime()).ToString();
+            post.description = "Her er en beskrivelse";
+            post.title = "Titlen";
+            post.url = "www.google.dk";
 
+
+            //var user2 = Builders<User>.Filter.Eq("name", "Kim Hansen");
+            var user3 = users.
+            var update = Builders<User>.Update.Push("post", post);
+
+            users.UpdateOne(user2, update);
+            
             //Builders<User>.Update.Push()
-            users.UpdateOne("{name : 'Kim Hansen'}", "{$push: {posts: 'hej2'}}");
+            //users.UpdateOne("{name : 'Kim Hansen'}", "{$push: {po}");
             //
             //users.UpdateOne({name:'Kim Hansen'},)
 
