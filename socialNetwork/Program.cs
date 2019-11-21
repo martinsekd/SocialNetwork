@@ -16,12 +16,15 @@ namespace socialNetwork
             users = database.GetCollection<User>("User");
             posts = database.GetCollection<Post>("Post");
 
-            //var user = new User();
-            //user.age = 20;
-            //user.gender = "Mand";
-            //user.name = "Kim Hansen";
+            var user = new User();
+            user.age = 20;
+            user.gender = "Mand";
+            user.name = "Kim Hansen";
 
-            //users.InsertOne(user);
+            users.InsertOne(user);
+
+            //var user2 = Builders<BsonDocument>.Filter.Eq("name": "Kim Hansen");
+
             //Builders<User>.Update.Push()
             users.UpdateOne("{name : 'Kim Hansen'}", "{$push: {posts: 'hej2'}}");
             //
