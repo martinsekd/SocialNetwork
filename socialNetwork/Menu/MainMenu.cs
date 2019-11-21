@@ -6,13 +6,14 @@ namespace socialNetwork.Menu
 {
     class MainMenu
     {
-        public string MenuValg = "mainMenu";
+        public string MenuValg;
 
-        public bool Runner = true;
+        public bool Runner;
 
         public MainMenu()
         {
-
+            MenuValg = "mainMenu";
+            Runner = true;
         }
 
         public void StartMenu()
@@ -28,7 +29,8 @@ namespace socialNetwork.Menu
                         Console.WriteLine("(1): Min profil");
                         Console.WriteLine("(2): Venner");
                         Console.WriteLine("(3): Users wall");
-                        Console.WriteLine("(4): Exit program");
+                        Console.WriteLine("(4): Registrer ny bruger");
+                        Console.WriteLine("(5): Exit program");
                         Console.WriteLine("---------------------------------");
 
                         string MenuValg = Console.ReadLine();
@@ -52,6 +54,22 @@ namespace socialNetwork.Menu
                         break;
 
                     case "4":
+                        Console.Write("Skriv ny brugers navn: ");
+                        string userName = Console.ReadLine();
+
+                        try
+                        {
+                            // Indsæt ny bruger
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Fejled I at skrive til database");
+                            Console.WriteLine("Tryk enter for at forsætte");
+                            Console.ReadLine();
+                        }
+                        break;
+
+                    case "5":
                         Runner = false;
                         break;
 

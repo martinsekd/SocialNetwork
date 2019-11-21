@@ -53,7 +53,16 @@ namespace socialNetwork.Menu
                         Console.Write("Skriv kommentar til Post: ");
                         string postComment = Console.ReadLine();
 
-                        // skriv kommentar på post
+                        try
+                        {
+                            // skriv kommentar på post
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Fejled I at skrive til database");
+                            Console.WriteLine("Tryk enter for at forsætte");
+                            Console.ReadLine();
+                        }
                         break;
 
                     case "3":
