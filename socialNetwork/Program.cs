@@ -3,6 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using socialNetwork.Db;
 
 namespace socialNetwork
 {
@@ -13,18 +14,11 @@ namespace socialNetwork
 
             static void Main(string[] args)
             {
+            Db.Db.Init();
                 //IMongoCollection<User> users;
                 //IMongoCollection<Post> posts;
                 
-                var client = new MongoClient("mongodb://127.0.0.1:27017");
-                var database = client.GetDatabase("SocialNetwork");
 
-                users = database.GetCollection<User>("User");
-                posts = database.GetCollection<Post>("Post");
-                circles = database.GetCollection<Circle>("Circle");
-
-                feed("Børge");
-                insertTestData();
 
                 //var post = new Post();
                 //post.id = ObjectId.GenerateNewId((int)DateTime.Now.ToFileTime()).ToString();

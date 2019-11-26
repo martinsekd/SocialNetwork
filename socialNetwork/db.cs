@@ -1,12 +1,31 @@
+using MongoDB.Driver;
+using System;
+using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 
-
-namespace socialNetwork
+namespace socialNetwork.Db
 {
     static class Db
     {
         public static IMongoCollection<User> users;
         public static IMongoCollection<Post> posts;
         public static IMongoCollection<Circle> circles;
+
+        public static void Init()
+        {
+            var client = new MongoClient("mongodb://127.0.0.1:27017");
+            var database = client.GetDatabase("SocialNetwork");
+
+            users = database.GetCollection<User>("User");
+            posts = database.GetCollection<Post>("Post");
+            circles = database.GetCollection<Circle>("Circle");
+
+            feed("Børge");
+            insertTestData();
+        }
+
+
 
         public static void feed(string userid)
         {
