@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+us
+
 
 namespace socialNetwork.Menu
 {
@@ -46,11 +48,25 @@ namespace socialNetwork.Menu
                         break;
 
                     case "2":
-                        Console.Write("Skriv Post: ");
+                        Console.Write("Skriv Post Title: ");
+                        string postTitle = Console.ReadLine();
+                        Console.Write("Skriv Post beskrivelse: ");
                         string postContent = Console.ReadLine();
+                        Console.Write("Skriv Post URL: ");
+                        string postUrl = Console.ReadLine();
 
                         try
                         {
+                            Circle circle = new Circle();
+                            Post post = new Post();
+                            post.id = ObjectId.GenerateNewId((int)DateTime.Now.ToFileTime()).ToString();
+                            post.description = postContent;
+                            post.title = postTitle;
+                            post.url = postUrl;
+                            post.created = DateTime.Now;
+                            post.circle = circle;
+                            post.comments = new System.Collections.Generic.List<Comment>();
+                            Program.users.
                             // lav en post
                         }
                         catch (Exception)
