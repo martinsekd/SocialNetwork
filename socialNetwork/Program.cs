@@ -131,7 +131,7 @@ namespace socialNetwork
                 circles = database.GetCollection<Circle>("Circle");
 
                 feed("Børge");
-                //insertTestData();
+                insertTestData();
 
                 //var post = new Post();
                 //post.id = ObjectId.GenerateNewId((int)DateTime.Now.ToFileTime()).ToString();
