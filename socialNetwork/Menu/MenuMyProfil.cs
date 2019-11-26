@@ -57,15 +57,15 @@ namespace socialNetwork.Menu
 
                         try
                         {
-                            Circle circle = new Circle();
-                            Post post = new Post();
-                            post.id = ObjectId.GenerateNewId((int)DateTime.Now.ToFileTime()).ToString();
-                            post.description = postContent;
-                            post.title = postTitle;
-                            post.url = postUrl;
-                            post.created = DateTime.Now;
-                            post.circle = circle;
-                            post.comments = new System.Collections.Generic.List<Comment>();
+                            //Circle circle = new Circle();
+                            //Post post = new Post();
+                            //post.id = ObjectId.GenerateNewId((int)DateTime.Now.ToFileTime()).ToString();
+                            //post.description = postContent;
+                            //post.title = postTitle;
+                            //post.url = postUrl;
+                            //post.created = DateTime.Now;
+                            //post.circle = circle;
+                            //post.comments = new System.Collections.Generic.List<Comment>();
 
                             // lav en post
                         }
