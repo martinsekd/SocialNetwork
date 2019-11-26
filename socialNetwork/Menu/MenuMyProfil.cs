@@ -34,7 +34,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("(2): Lav en post");
                         Console.WriteLine("(3):tilbage til main");
                         Console.WriteLine("---------------------------------");
-
+                        
                         string MenuValg = Console.ReadLine();
 
                         Console.Clear();
