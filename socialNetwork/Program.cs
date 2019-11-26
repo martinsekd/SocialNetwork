@@ -14,7 +14,7 @@ namespace socialNetwork
 
             static void Main(string[] args)
             {
-            Db.Db.Init();
+                Db.Db.Init();
                 //IMongoCollection<User> users;
                 //IMongoCollection<Post> posts;
                 
