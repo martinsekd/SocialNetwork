@@ -14,5 +14,9 @@ namespace socialNetwork
         public string title { get; set; }
         public string description { get; set; }
         public string url { get; set; }
+
+        public DateTime created { get; set; }
+        public Circle circle { get; set; }
+        public List<Comment> comments { get; set; }
     }
 }
