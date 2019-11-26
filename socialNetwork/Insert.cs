@@ -6,5 +6,24 @@ namespace socialNetwork
 {
     class Insert
     {
+        public void createCircle()
+        {
+
+        }
+
+        public void createUser()
+        {
+
+        }
+
+        public void createPost()
+        {
+
+        }
+
+        public void createComment()
+        {
+
+        }
     }
 }

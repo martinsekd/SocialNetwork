@@ -1,5 +1,9 @@
 
 
+using System;
+using MongoDB.Bson;
+using MongoDB.Driver;
+
 namespace socialNetwork
 {
     static class Db
