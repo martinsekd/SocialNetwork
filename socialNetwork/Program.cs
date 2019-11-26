@@ -9,7 +9,7 @@ namespace socialNetwork
     class Program
     {
 
-        public static IMongoCollection<User> users;
+            public static IMongoCollection<User> users;
             public static IMongoCollection<Post> posts;
             public static IMongoCollection<Circle> circles;
 
@@ -103,7 +103,7 @@ namespace socialNetwork
                 user2.circles.Add(circle1);
 
                 Comment c1 = new Comment();
-                c1.content = "Godt brølt løve";
+                c1.content = "Godt";
                 c1.user = user2.userid;
                 post1.comments.Add(c1);
 
