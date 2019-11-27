@@ -15,6 +15,7 @@ namespace socialNetwork
 
         static void Main(string[] args)
         {
+            
             Db.Db.Init();
             MainMenu mainMenu = new MainMenu();
             mainMenu.StartMenu();
