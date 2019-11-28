@@ -8,6 +8,11 @@ namespace socialNetwork
 {
     class User
     {
+        public User()
+        {
+            circles = new List<Circle>();
+            blocked = new List<string>();
+        }
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string id { get; set; }
@@ -17,7 +22,6 @@ namespace socialNetwork
         public string name { get; set; }
         public int age { get; set; }
         public string gender { get; set; }
-        public List<Post> posts { get; set; }
         public List<Circle> circles { get; set; }
         public List<String> blocked { get; set; }
     }
