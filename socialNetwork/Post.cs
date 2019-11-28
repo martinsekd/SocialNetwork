@@ -8,6 +8,10 @@ namespace socialNetwork
 {
     class Post
     {
+        public Post()
+        {
+            comments = new List<Comment>();
+        }
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string id { get; set; }
@@ -17,6 +21,7 @@ namespace socialNetwork
 
         public DateTime created { get; set; }
         public Circle circle { get; set; }
+        public User author { get; set; }
         public List<Comment> comments { get; set; }
     }
 }

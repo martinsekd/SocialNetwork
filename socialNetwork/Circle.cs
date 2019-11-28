@@ -8,6 +8,10 @@ namespace socialNetwork
 {
     class Circle
     {
+        public Circle()
+        {
+            members = new List<string>();
+        }
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string id { get; set; }
