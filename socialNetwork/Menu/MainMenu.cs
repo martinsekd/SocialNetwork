@@ -39,7 +39,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("(6): Exit program");
                         Console.WriteLine("---------------------------------");
 
-                        string MenuValg = Console.ReadLine();
+                        MenuValg = Console.ReadLine();
 
                         Console.Clear();
                         break;

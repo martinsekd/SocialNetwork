@@ -36,7 +36,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("(4): Tilbage til main");
                         Console.WriteLine("---------------------------------");
 
-                        string MenuValg = Console.ReadLine();
+                        MenuValg = Console.ReadLine();
 
                         Console.Clear();
                         break;

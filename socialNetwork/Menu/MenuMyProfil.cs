@@ -37,7 +37,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("(3):tilbage til main");
                         Console.WriteLine("---------------------------------");
                         
-                        string MenuValg = Console.ReadLine();
+                        MenuValg = Console.ReadLine();
 
                         Console.Clear();
                         break;
