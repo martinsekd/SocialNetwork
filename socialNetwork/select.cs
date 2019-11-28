@@ -15,7 +15,7 @@ namespace socialNetwork
 
         public List<User> GetAllUsers()
         {
-            return Db.users.Find(u => u.id!=null).ToList();
+            return Db.users.Find(u=> u.age!=-1).ToList();
         }
 
         public Circle GetCircle(string name)
