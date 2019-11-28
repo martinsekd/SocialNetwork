@@ -36,7 +36,8 @@ namespace socialNetwork.Menu
                         Console.WriteLine("(3): Users wall");
                         Console.WriteLine("(4): Public wall");
                         Console.WriteLine("(5): Registrer ny bruger");
-                        Console.WriteLine("(6): Exit program");
+                        Console.WriteLine("(6): Vis alle bruger");
+                        Console.WriteLine("(7): Exit program");
                         Console.WriteLine("---------------------------------");
 
                         MenuValg = Console.ReadLine();
@@ -97,6 +98,20 @@ namespace socialNetwork.Menu
                         break;
 
                     case "6":
+                        List<User> user = Db.select.GetAllUsers();
+
+                        Console.WriteLine("UserID" + "\t" + "Nave" + "\t" + "Alder" + "\t" + "Køn" + "\n");
+                        for (int i = 0; i < user.Count; i++)
+                        {
+                            Console.WriteLine( user[i].id.ToString() + "\t" + user[i].name.ToString() + "\t" + user[i].age.ToString() + "\t" + user[i].gender.ToString());
+                        }
+
+                        Console.WriteLine("Tryk enter for at forsætte");
+                        Console.ReadLine();
+                        MenuValg = "mainMenu";
+                        break;
+
+                    case "7":
                         Runner = false;
                         break;
 
