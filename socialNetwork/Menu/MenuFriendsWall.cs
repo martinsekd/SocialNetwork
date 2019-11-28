@@ -10,8 +10,11 @@ namespace socialNetwork.Menu
 
         public bool Runner;
 
-        public MenuFriendsWall()
+        public string UserId;
+
+        public MenuFriendsWall(string userId)
         {
+            UserId = userId;
             MenuValg = "mainMenu";
             Runner = true;
         }
@@ -55,6 +58,9 @@ namespace socialNetwork.Menu
 
                         try
                         {
+                            User user = Db.select.GetUser(User);
+                            //Post post = Db.select.GetPostsFromAuthor()
+                            //Db.insert.createComment(postComment, user, )
                             // skriv kommentar på post
                         }
                         catch (Exception)

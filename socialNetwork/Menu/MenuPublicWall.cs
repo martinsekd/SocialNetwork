@@ -4,7 +4,7 @@ using System.Text;
 
 namespace socialNetwork.Menu
 {
-    class MenuUserWall
+    class MenuPublicWall
     {
         public string MenuValg = "mainMenu";
 
@@ -12,7 +12,7 @@ namespace socialNetwork.Menu
 
         private string UserId;
 
-        public MenuUserWall(string userId)
+        public MenuPublicWall(string userId)
         {
             UserId = userId;
             MenuValg = "mainMenu";
@@ -29,7 +29,7 @@ namespace socialNetwork.Menu
                         Console.Clear();
                         Console.WriteLine("Velkommen til Social Network.");
                         Console.WriteLine("---------------------------------");
-                        Console.WriteLine("Menu: User wall");
+                        Console.WriteLine("Menu: Public wall");
                         Console.WriteLine("---------------------------------");
                         Console.WriteLine("(1): Vis seneste post");
                         Console.WriteLine("(2): Skriv kommentar på post");

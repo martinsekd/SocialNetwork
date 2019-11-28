@@ -10,8 +10,11 @@ namespace socialNetwork.Menu
 
         public bool Runner;
 
-        public MenuFriends()
+        private string UserId;
+
+        public MenuFriends(string userId)
         {
+            UserId = UserId;
             MenuValg = "mainMenu";
             Runner = true;
         }
@@ -43,7 +46,7 @@ namespace socialNetwork.Menu
                         break;
 
                     case "2":
-                        MenuFriendsWall menuFriendsWall = new MenuFriendsWall();
+                        MenuFriendsWall menuFriendsWall = new MenuFriendsWall(UserId);
                         menuFriendsWall.StartMenu();
                         break;
 

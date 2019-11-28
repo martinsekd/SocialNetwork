@@ -14,7 +14,8 @@ namespace socialNetwork
         public static IMongoCollection<Circle> circles;
 
         public static Insert insert = new Insert();
-        
+        public static Select select = new Select(); 
+
         public static void Init()
         {
             var client = new MongoClient("mongodb://127.0.0.1:27017");
