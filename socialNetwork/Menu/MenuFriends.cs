@@ -14,7 +14,7 @@ namespace socialNetwork.Menu
 
         public MenuFriends(string userId)
         {
-            UserId = UserId;
+            UserId = userId;
             MenuValg = "mainMenu";
             Runner = true;
         }
