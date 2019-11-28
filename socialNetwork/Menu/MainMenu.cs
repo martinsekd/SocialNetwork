@@ -40,7 +40,12 @@ namespace socialNetwork.Menu
                         break;
 
                     case "1":
-                        MenuMyProfil menuMyProfil = new MenuMyProfil();
+                        Console.WriteLine("Skriv min brugers id");
+                        string userId = Console.ReadLine();
+
+                        //Se user existere... eller break;
+
+                        MenuMyProfil menuMyProfil = new MenuMyProfil(userId);
                         menuMyProfil.StartMenu();
                         break;
 
