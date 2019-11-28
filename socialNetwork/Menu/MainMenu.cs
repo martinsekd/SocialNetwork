@@ -89,6 +89,7 @@ namespace socialNetwork.Menu
                             Console.WriteLine("Tryk enter for at forsætte");
                             Console.ReadLine();
                         }
+                        MenuValg = "mainMenu";
                         break;
 
                     case "6":
