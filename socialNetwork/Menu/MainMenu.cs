@@ -7,13 +7,14 @@ namespace socialNetwork.Menu
     class MainMenu
     {
         public string MenuValg;
-
+        private Insert insert;
         public bool Runner;
 
         public MainMenu()
         {
             MenuValg = "mainMenu";
             Runner = true;
+            insert = new Insert();
         }
 
         public void StartMenu()
@@ -54,12 +55,18 @@ namespace socialNetwork.Menu
                         break;
 
                     case "4":
-                        Console.Write("Skriv ny brugers navn: ");
+                        Console.Write("Skriv ny brugers fulde navn: ");
+                        string Name = Console.ReadLine();
+                        Console.Write("Skriv ny brugers brugernavn: ");
                         string userName = Console.ReadLine();
-
+                        Console.WriteLine("Skriv brugers alder");
+                        int age = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Skriv køn (M/K):");
+                        string kon = Console.ReadLine();
                         try
                         {
                             // Indsæt ny bruger
+                            insert.createUser(userName, Name, age, kon);
                         }
                         catch (Exception)
                         {
