@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 using MongoDB.Driver;
 
@@ -10,6 +11,11 @@ namespace socialNetwork
         public User GetUser(string userid)
         {
             return Db.users.Find(u => u.userid.Equals(userid)).First();
+        }
+
+        public List<User> GetAllUsers()
+        {
+            return Db.users.Find(u => u.id!=null).ToList();
         }
 
         public Circle GetCircle(string name)
