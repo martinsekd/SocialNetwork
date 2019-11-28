@@ -15,7 +15,7 @@ namespace socialNetwork
         {
             var cir = new Circle();
             cir.name = name;
-            Db.Db.circles.InsertOne(cir);
+            Db.circles.InsertOne(cir);
             return cir;
         }
 
@@ -26,7 +26,7 @@ namespace socialNetwork
             user.age = age;
             user.gender = gender;
             user.userid = userid;
-            Db.Db.users.InsertOne(user);
+            Db.users.InsertOne(user);
             return user;
         }
 
@@ -39,7 +39,7 @@ namespace socialNetwork
             post.description = description;
             post.url = url;
             post.circle = circle;
-            Db.Db.posts.InsertOne(post);
+            Db.posts.InsertOne(post);
             return post;
         }
 
@@ -51,7 +51,7 @@ namespace socialNetwork
 
             var filter = Builders<Post>.Filter.Eq("id", post.id);
             var update = Builders<Post>.Update.Push(p => p.comments, comment);
-            Db.Db.posts.UpdateOneAsync(filter, update);
+            Db.posts.UpdateOneAsync(filter, update);
             return comment;
         }
 
@@ -59,7 +59,7 @@ namespace socialNetwork
         {
             var filter = Builders<Circle>.Filter.Eq("id", circle.id);
             var update = Builders<Circle>.Update.Push(c => c.members, user.userid);
-            Db.Db.circles.FindOneAndUpdate(filter, update);
+            Db.circles.FindOneAndUpdate(filter, update);
 
         }
     }
