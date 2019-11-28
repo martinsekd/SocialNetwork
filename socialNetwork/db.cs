@@ -13,6 +13,8 @@ namespace socialNetwork.Db
         public static IMongoCollection<Post> posts;
         public static IMongoCollection<Circle> circles;
 
+        public static Insert insert = new Insert();
+        
         public static void Init()
         {
             var client = new MongoClient("mongodb://127.0.0.1:27017");

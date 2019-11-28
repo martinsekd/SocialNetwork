@@ -8,6 +8,7 @@ namespace socialNetwork.Menu
     {
         public string MenuValg;
         private Insert insert;
+        private Select selects;
         public bool Runner;
 
         public MainMenu()
@@ -15,6 +16,7 @@ namespace socialNetwork.Menu
             MenuValg = "mainMenu";
             Runner = true;
             insert = new Insert();
+            selects = new Select();
         }
 
         public void StartMenu()
@@ -42,7 +44,7 @@ namespace socialNetwork.Menu
                     case "1":
                         Console.WriteLine("Skriv min brugers id");
                         string userId = Console.ReadLine();
-
+                        
                         //Se user existere... eller break;
 
                         MenuMyProfil menuMyProfil = new MenuMyProfil(userId);

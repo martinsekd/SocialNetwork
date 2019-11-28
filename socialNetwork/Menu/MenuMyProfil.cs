@@ -9,7 +9,7 @@ namespace socialNetwork.Menu
     class MenuMyProfil
     {
         public string MenuValg = "mainMenu";
-
+        
         public bool Runner = true;
 
         private string UserId;
