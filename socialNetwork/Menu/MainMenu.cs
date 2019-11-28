@@ -103,7 +103,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("UserID" + "\t" + "Nave" + "\t" + "Alder" + "\t" + "Køn" + "\n");
                         for (int i = 0; i < user.Count; i++)
                         {
-                            Console.WriteLine( user[i].id.ToString() + "\t" + user[i].name.ToString() + "\t" + user[i].age.ToString() + "\t" + user[i].gender.ToString());
+                            Console.WriteLine( user[i].userid.ToString() + "\t" + user[i].name.ToString() + "\t" + user[i].age.ToString() + "\t" + user[i].gender.ToString());
                         }
 
                         Console.WriteLine("Tryk enter for at forsætte");
