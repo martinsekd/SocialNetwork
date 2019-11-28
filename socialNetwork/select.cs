@@ -12,6 +12,11 @@ namespace socialNetwork
             return Db.users.Find(u => u.userid.Equals(userid)).First();
         }
 
+        public Circle GetCircle(string name)
+        {
+            return null;
+        }
+
         public List<Post> GetPostsFromAuthor(string userid)
         {
             var posts = Db.posts.Find(p => p.author.userid.Equals(userid)).ToList();
