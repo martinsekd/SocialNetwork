@@ -37,7 +37,7 @@ namespace socialNetwork
 
             //var select = new Select();
             //select.GetPostsFromAuthor("Søren123");
-            Console.ReadLine();
+            //Console.ReadLine();
         }
 
 
