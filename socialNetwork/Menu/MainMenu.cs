@@ -41,30 +41,29 @@ namespace socialNetwork.Menu
 
                         string MenuValg = Console.ReadLine();
 
-                        Console.WriteLine("Skriv min brugers id");
-                        userId = Console.ReadLine();
-
-                        //Se user eksistere... ellers break;
-
                         Console.Clear();
                         break;
 
                     case "1":
+                        LogOn();
                         MenuMyProfil menuMyProfil = new MenuMyProfil(userId);
                         menuMyProfil.StartMenu();
                         break;
 
                     case "2":
+                        LogOn();
                         MenuFriends menuFriends = new MenuFriends(userId);
                         menuFriends.StartMenu();
                         break;
 
                     case "3":
+                        LogOn();
                         MenuPublicWall menuPublicWall = new MenuPublicWall(userId);
                         menuPublicWall.StartMenu();
                         break;
 
                     case "4":
+                        LogOn();
                         MenuUserWall menuUserWall = new MenuUserWall(userId);
                         menuUserWall.StartMenu();
                         break;
@@ -104,6 +103,14 @@ namespace socialNetwork.Menu
                         break;
                 }
             }
+        }
+
+        public void LogOn()
+        {
+            Console.WriteLine("Skriv min brugers id");
+            userId = Console.ReadLine();
+
+            //Se user eksistere... ellers break;
         }
     }
 }
