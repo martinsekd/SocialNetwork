@@ -42,7 +42,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("Skriv min brugers id");
                         string userId = Console.ReadLine();
 
-                        //Se user existere... eller break;
+                        //Se user eksistere... ellers break;
 
                         MenuMyProfil menuMyProfil = new MenuMyProfil(userId);
                         menuMyProfil.StartMenu();
