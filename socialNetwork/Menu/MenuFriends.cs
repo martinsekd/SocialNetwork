@@ -46,7 +46,7 @@ namespace socialNetwork.Menu
                         break;
 
                     case "2":
-                        MenuFriendsWall menuFriendsWall = new MenuFriendsWall();
+                        MenuFriendsWall menuFriendsWall = new MenuFriendsWall(UserId);
                         menuFriendsWall.StartMenu();
                         break;
 
