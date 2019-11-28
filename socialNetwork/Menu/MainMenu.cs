@@ -11,6 +11,8 @@ namespace socialNetwork.Menu
         private Select selects;
         public bool Runner;
 
+        private string userId;
+
         public MainMenu()
         {
             MenuValg = "mainMenu";
@@ -39,45 +41,30 @@ namespace socialNetwork.Menu
 
                         string MenuValg = Console.ReadLine();
 
+                        Console.WriteLine("Skriv min brugers id");
+                        userId = Console.ReadLine();
+
+                        //Se user eksistere... ellers break;
+
                         Console.Clear();
                         break;
 
                     case "1":
-                        Console.WriteLine("Skriv min brugers id");
-                        string userId = Console.ReadLine();
-
-                        //Se user eksistere... ellers break;
-
                         MenuMyProfil menuMyProfil = new MenuMyProfil(userId);
                         menuMyProfil.StartMenu();
                         break;
 
                     case "2":
-                        Console.WriteLine("Skriv min brugers id");
-                        string userId = Console.ReadLine();
-
-                        //Se user eksistere... ellers break;
-
                         MenuFriends menuFriends = new MenuFriends(userId);
                         menuFriends.StartMenu();
                         break;
 
                     case "3":
-                        Console.WriteLine("Skriv min brugers id");
-                        string userId = Console.ReadLine();
-
-                        //Se user eksistere... ellers break;
-
                         MenuPublicWall menuPublicWall = new MenuPublicWall(userId);
                         menuPublicWall.StartMenu();
                         break;
 
                     case "4":
-                        Console.WriteLine("Skriv min brugers id");
-                        string userId = Console.ReadLine();
-
-                        //Se user eksistere... ellers break;
-
                         MenuUserWall menuUserWall = new MenuUserWall(userId);
                         menuUserWall.StartMenu();
                         break;

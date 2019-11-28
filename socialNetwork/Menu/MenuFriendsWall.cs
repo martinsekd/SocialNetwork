@@ -58,7 +58,7 @@ namespace socialNetwork.Menu
 
                         try
                         {
-                            User user = Db.select.GetUser(User);
+                            User user = Db.select.GetUser(UserId);
                             //Post post = Db.select.GetPostsFromAuthor()
                             //Db.insert.createComment(postComment, user, )
                             // skriv kommentar på post
