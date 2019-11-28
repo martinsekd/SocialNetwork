@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 
-namespace socialNetwork.Db
+namespace socialNetwork
 {
     static class Db
     {

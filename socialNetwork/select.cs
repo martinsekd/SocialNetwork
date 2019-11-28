@@ -9,12 +9,12 @@ namespace socialNetwork
     {
         public User GetUser(string userid)
         {
-            return Db.Db.users.Find(u => u.userid.Equals(userid)).First();
+            return Db.users.Find(u => u.userid.Equals(userid)).First();
         }
 
         public List<Post> GetPostsFromAuthor(string userid)
         {
-            var posts = Db.Db.posts.Find(p => p.author.userid.Equals(userid)).ToList();
+            var posts = Db.posts.Find(p => p.author.userid.Equals(userid)).ToList();
 
             foreach (var post in posts)
             {

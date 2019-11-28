@@ -3,7 +3,6 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
-using socialNetwork.Db;
 using socialNetwork.Menu;
 
 namespace socialNetwork
@@ -16,7 +15,7 @@ namespace socialNetwork
         static void Main(string[] args)
         {
             
-            Db.Db.Init();
+            Db.Init();
             MainMenu mainMenu = new MainMenu();
             mainMenu.StartMenu();
 
