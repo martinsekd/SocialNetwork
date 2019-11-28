@@ -52,12 +52,22 @@ namespace socialNetwork.Menu
                         break;
 
                     case "2":
-                        MenuFriends menuFriends = new MenuFriends();
+                        Console.WriteLine("Skriv min brugers id");
+                        string userId = Console.ReadLine();
+
+                        //Se user eksistere... ellers break;
+
+                        MenuFriends menuFriends = new MenuFriends(userId);
                         menuFriends.StartMenu();
                         break;
 
                     case "3":
-                        MenuUserWall menuUserWall = new MenuUserWall();
+                        Console.WriteLine("Skriv min brugers id");
+                        string userId = Console.ReadLine();
+
+                        //Se user eksistere... ellers break;
+
+                        MenuUserWall menuUserWall = new MenuUserWall(userId);
                         menuUserWall.StartMenu();
                         break;
 

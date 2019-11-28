@@ -10,8 +10,11 @@ namespace socialNetwork.Menu
 
         public bool Runner = true;
 
-        public MenuUserWall()
+        private string UserId;
+
+        public MenuUserWall(string userId)
         {
+            UserId = userId;
             MenuValg = "mainMenu";
             Runner = true;
         }

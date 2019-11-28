@@ -55,6 +55,7 @@ namespace socialNetwork.Menu
 
                         try
                         {
+                            //Db.insert.createComment(postComment, )
                             // skriv kommentar på post
                         }
                         catch (Exception)

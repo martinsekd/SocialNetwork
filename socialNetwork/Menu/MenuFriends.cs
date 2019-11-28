@@ -10,8 +10,11 @@ namespace socialNetwork.Menu
 
         public bool Runner;
 
-        public MenuFriends()
+        private string UserId;
+
+        public MenuFriends(string userId)
         {
+            UserId = UserId;
             MenuValg = "mainMenu";
             Runner = true;
         }
