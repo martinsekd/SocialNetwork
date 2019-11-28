@@ -46,6 +46,7 @@ namespace socialNetwork.Menu
 
                         Console.WriteLine("Tryk enter for at forsætte");
                         Console.ReadLine();
+                        MenuValg = "mainMenu";
                         break;
 
                     case "2":
@@ -64,6 +65,7 @@ namespace socialNetwork.Menu
                             Console.WriteLine("Tryk enter for at forsætte");
                             Console.ReadLine();
                         }
+                        MenuValg = "mainMenu";
                         break;
 
                     case "3":

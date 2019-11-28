@@ -48,24 +48,28 @@ namespace socialNetwork.Menu
                         LogOn();
                         MenuMyProfil menuMyProfil = new MenuMyProfil(userId);
                         menuMyProfil.StartMenu();
+                        MenuValg = "mainMenu";
                         break;
 
                     case "2":
                         LogOn();
                         MenuFriends menuFriends = new MenuFriends(userId);
                         menuFriends.StartMenu();
+                        MenuValg = "mainMenu";
                         break;
 
                     case "3":
                         LogOn();
                         MenuPublicWall menuPublicWall = new MenuPublicWall(userId);
                         menuPublicWall.StartMenu();
+                        MenuValg = "mainMenu";
                         break;
 
                     case "4":
                         LogOn();
                         MenuUserWall menuUserWall = new MenuUserWall(userId);
                         menuUserWall.StartMenu();
+                        MenuValg = "mainMenu";
                         break;
 
 

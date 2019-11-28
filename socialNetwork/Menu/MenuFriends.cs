@@ -43,11 +43,13 @@ namespace socialNetwork.Menu
 
                     case "1":
                         // Vis list af alle her
+                        MenuValg = "mainMenu";
                         break;
 
                     case "2":
                         MenuFriendsWall menuFriendsWall = new MenuFriendsWall(UserId);
                         menuFriendsWall.StartMenu();
+                        MenuValg = "mainMenu";
                         break;
 
                     case "3":
