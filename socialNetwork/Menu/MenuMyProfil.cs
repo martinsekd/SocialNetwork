@@ -28,7 +28,7 @@ namespace socialNetwork.Menu
                 {
                     case "mainMenu":
                         Console.Clear();
-                        Console.WriteLine("Velkommen til Social Network.");
+                        Console.WriteLine("Velkommen til Social Network "+UserId+".");
                         Console.WriteLine("---------------------------------");
                         Console.WriteLine("Menu: Min profil");
                         Console.WriteLine("---------------------------------");
@@ -44,7 +44,7 @@ namespace socialNetwork.Menu
 
                     case "1":
                         // Vis min egen væg
-
+                        Db.@select.GetPostsFromAuthor(UserId);
                         Console.WriteLine("Tryk enter for at forsætte");
                         Console.ReadLine();
                         MenuValg = "mainMenu";
@@ -57,9 +57,16 @@ namespace socialNetwork.Menu
                         string postContent = Console.ReadLine();
                         Console.Write("Skriv Post URL: ");
                         string postUrl = Console.ReadLine();
+                        Db.@select.GetAllCircles();
+                        Console.WriteLine("Skriv hvilken cirkel, den skal postes i");
+                        string circleName = Console.ReadLine();
 
                         try
                         {
+                            var user = Db.@select.GetUser(UserId);
+                            var circle = Db.@select.GetCircle(circleName);
+                            Db.insert.createPost(postTitle, postContent, postUrl, user, circle);
+                            
                             //Circle circle = new Circle();
                             //Post post = new Post();
                             //post.id = ObjectId.GenerateNewId((int)DateTime.Now.ToFileTime()).ToString();

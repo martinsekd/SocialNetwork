@@ -27,6 +27,8 @@ namespace socialNetwork
             user.gender = gender;
             user.userid = userid;
             Db.users.InsertOne(user);
+            var cir = Db.@select.GetCircle("Public");
+            Db.insert.addUserToCircle(user,cir);
             return user;
         }
 
@@ -61,6 +63,13 @@ namespace socialNetwork
             var update = Builders<Circle>.Update.Push(c => c.members, user.userid);
             Db.circles.FindOneAndUpdate(filter, update);
 
+        }
+
+        public void addBlockedUser(User user, User blockedUser)
+        {
+            var filter = Builders<User>.Filter.Eq("id", user.userid);
+            var update = Builders<User>.Update.Push(u => u.blocked, user.userid);
+            Db.users.FindOneAndUpdate(filter, update);
         }
     }
 }

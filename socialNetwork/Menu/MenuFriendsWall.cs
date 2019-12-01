@@ -52,14 +52,15 @@ namespace socialNetwork.Menu
                         break;
 
                     case "2":
-                        Console.Write("Skriv id på Post: ");
-                        string idContent = Console.ReadLine();
+                        Console.Write("Skriv titel på Post: ");
+                        string titel = Console.ReadLine();
                         Console.Write("Skriv kommentar til Post: ");
                         string postComment = Console.ReadLine();
 
                         try
                         {
-                            User user = Db.select.GetUser(UserId);
+                            Post post = Db.@select.GetPostFromTitle(titel);
+                            Db.insert.createComment(postComment, UserId, post);
                             //Post post = Db.select.GetPostsFromAuthor()
                             //Db.insert.createComment(postComment, user, )
                             // skriv kommentar på post
