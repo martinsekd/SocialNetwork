@@ -61,9 +61,7 @@ namespace socialNetwork.Menu
                         {
                             Post post = Db.@select.GetPostFromTitle(titel);
                             Db.insert.createComment(postComment, UserId, post);
-                            //Post post = Db.select.GetPostsFromAuthor()
-                            //Db.insert.createComment(postComment, user, )
-                            // skriv kommentar på post
+                            
                         }
                         catch (Exception)
                         {

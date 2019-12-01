@@ -11,10 +11,12 @@ namespace socialNetwork.Menu
         public bool Runner = true;
 
         private string UserId;
+        private string GuestId;
 
-        public MenuUserWall(string userId)
+        public MenuUserWall(string userId,string guestId)
         {
             UserId = userId;
+            GuestId = guestId;
             MenuValg = "mainMenu";
             Runner = true;
         }
@@ -33,7 +35,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("---------------------------------");
                         Console.WriteLine("(1): Vis seneste post");
                         Console.WriteLine("(2): Skriv kommentar på post");
-                        Console.WriteLine("(4): Tilbage til main");
+                        Console.WriteLine("(3): Tilbage til main");
                         Console.WriteLine("---------------------------------");
 
                         MenuValg = Console.ReadLine();
@@ -43,6 +45,7 @@ namespace socialNetwork.Menu
 
                     case "1":
                         //Vis seneste post 
+                        Db.@select.GetPostsFromWall(UserId, GuestId);
 
                         Console.WriteLine("Tryk enter for at forsætte");
                         Console.ReadLine();
@@ -50,14 +53,16 @@ namespace socialNetwork.Menu
                         break;
 
                     case "2":
-                        Console.Write("Skriv id på Post: ");
-                        string idContent = Console.ReadLine();
+                        Console.Write("Skriv titel på Post: ");
+                        string titel = Console.ReadLine();
                         Console.Write("Skriv kommentar til Post: ");
                         string postComment = Console.ReadLine();
 
                         try
                         {
-                            // Skriv kommentar på post
+                            Post post = Db.@select.GetPostFromTitle(titel);
+                            Db.insert.createComment(postComment, UserId, post);
+
                         }
                         catch (Exception)
                         {

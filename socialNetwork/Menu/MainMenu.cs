@@ -42,7 +42,9 @@ namespace socialNetwork.Menu
                         {
                             Console.WriteLine("(4): Log af");
                             Console.WriteLine("(5): Min profil");
-                            Console.WriteLine("(6): Venner");
+                            //Console.WriteLine("(6): Venner");
+                            Console.WriteLine("(6): Tilføj til cirkel");
+                            Console.WriteLine("(0): Tilføj ny cirkel");
                             Console.WriteLine("(7): Users wall");
                             Console.WriteLine("(8): Public wall");
                         }
@@ -109,20 +111,34 @@ namespace socialNetwork.Menu
                         break;
 
                     case "6":
-                        MenuFriends menuFriends = new MenuFriends(userId);
-                        menuFriends.StartMenu();
+                        Console.WriteLine("----------");
+                        Db.@select.GetAllCircles();
+                        Console.WriteLine("Skriv cirkel navn");
+                        string circleName = Console.ReadLine();
+                        Db.insert.addUserToCircle(Db.@select.GetUser(userId),Db.@select.GetCircle(circleName));
+                        Console.WriteLine("------------");
                         MenuValg = "mainMenu";
                         break;
 
                     case "7":
-                        MenuPublicWall menuPublicWall = new MenuPublicWall(userId);
-                        menuPublicWall.StartMenu();
+                        Console.WriteLine("-----------");
+                        var users = selects.GetAllUsers();
+                        foreach (var luser in users)
+                        {
+                            Console.WriteLine(luser.userid);
+                        }
+                        Console.WriteLine("-------");
+                        Console.WriteLine("Skriv brugerid for ønsket besøg");
+                        string guestid = Console.ReadLine();
+                        MenuUserWall menuUserWall = new MenuUserWall(userId,guestid);
+                        menuUserWall.StartMenu();
                         MenuValg = "mainMenu";
+                        
                         break;
 
                     case "8":
-                        MenuUserWall menuUserWall = new MenuUserWall(userId);
-                        menuUserWall.StartMenu();
+                        MenuPublicWall menuPublicWall = new MenuPublicWall(userId);
+                        menuPublicWall.StartMenu();
                         MenuValg = "mainMenu";
                         break;
 
@@ -131,6 +147,15 @@ namespace socialNetwork.Menu
                         Runner = false;
                         break;
 
+                    case "0":
+                        var circles = Db.@select.GetAllCircles();
+                        
+                        Console.WriteLine();
+                        Console.WriteLine("Skriv et nyt cirkelnavn:");
+                        var cname = Console.ReadLine();
+                        Db.insert.createCircle(cname);
+                        MenuValg = "mainMenu";
+                        break;
                     default:
                         Console.WriteLine("Forkert indtastning");
                         MenuValg = "mainMenu";
