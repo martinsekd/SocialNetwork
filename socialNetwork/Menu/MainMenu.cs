@@ -1,47 +1,4 @@
-﻿//Beskrivelse:
-//////////////Mainmenu
-//////////////- Viser en hovedemenu
-
-//////////////MenuMyProfil
-//////////////- Kan vise ens egens væg med post
-//////////////- Kan skrive post på ens egenvæg
-//////////////- Kan fjerne en post fra ens væg
-
-//////////////MenuFriends
-//////////////- Kan gå til en vens væg
-//////////////- Kan tilføje en ny cirkel
-//////////////- Kan fjerne en cirkel
-//////////////- Kan tilføje venner til cirkel
-//////////////- Kan fjerne venner fra cirkel
-
-//////////////MenuFriendsWall
-//////////////- Kan vise en vens væg med hans post
-//////////////- Kan skrive kommentar på en vens post
-
-//////////////MenuUserWall
-//////////////- Kan vise post for alle venner i en cirkel
-//////////////- Kan skrive kommentar på post fra en cirkel
-
-//////////////MenuPublicWall
-//////////////- Kan se alle bruger som du ikke er blokeret for. Deres posts.
-//////////////- Kan skrive kommentar på en en post
-///
-///
-///FORSLAG istedet for MenuUserWall
-///
-/// 
-//////////////MenuCirkel
-//////////////- Kan tilføje en ny cirkel
-//////////////- Kan fjerne en cirkel
-//////////////- Kan tilføje venner til cirkel
-//////////////- Kan fjerne venner fra cirkel
-//////////////- Kan gå til en cirkel
-
-//////////////MenuCirkelWall
-//////////////- Kan vise post for alle venner i en cirkel
-//////////////- Kan skrive kommentar på post fra en cirkel
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -85,7 +42,6 @@ namespace socialNetwork.Menu
                         {
                             Console.WriteLine("(4): Log af");
                             Console.WriteLine("(5): Min profil");
-                            Console.WriteLine("(6): Venner");
                             Console.WriteLine("(6): Tilføj til cirkel");
                             Console.WriteLine("(7): Tilføj ny cirkel");
                             Console.WriteLine("(8): Users wall");
