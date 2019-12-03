@@ -67,7 +67,6 @@ namespace socialNetwork.Menu
                         string kon = Console.ReadLine();
                         try
                         {
-                            // Indsæt ny bruger
                             insert.createUser(userName, Name, age, kon);
                         }
                         catch (Exception)
@@ -117,7 +116,7 @@ namespace socialNetwork.Menu
                         Db.@select.GetAllCircles();
                         Console.WriteLine("Skriv cirkel navn");
                         string circleName = Console.ReadLine();
-                        Db.insert.addUserToCircle(Db.@select.GetUser(userId),Db.@select.GetCircle(circleName));
+                        insert.addUserToCircle(Db.@select.GetUser(userId),Db.@select.GetCircle(circleName));
                         Console.WriteLine("------------");
                         MenuValg = "mainMenu";
                         break;
@@ -129,7 +128,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine();
                         Console.WriteLine("Skriv et nyt cirkelnavn:");
                         var cname = Console.ReadLine();
-                        Db.insert.createCircle(cname);
+                        insert.createCircle(cname);
                         MenuValg = "mainMenu";
                         break;
 

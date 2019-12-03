@@ -14,8 +14,10 @@ namespace socialNetwork
 
         static void Main(string[] args)
         {
-            
             Db.Init();
+
+            DbDummyData dbDummyData = new DbDummyData();
+
             MainMenu mainMenu = new MainMenu();
             mainMenu.StartMenu();
 
