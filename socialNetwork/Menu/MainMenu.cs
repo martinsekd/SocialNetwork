@@ -83,7 +83,7 @@ namespace socialNetwork.Menu
 
                         List<User> user = Db.select.GetAllUsers();
                         
-                        Console.WriteLine("UserID" + "\t\t\t" + "Nave" + "\t\t\t" + "Alder" + "\t\t\t" + "Køn" + "\n");
+                        Console.WriteLine("UserID" + "\t\t\t" + "Navn" + "\t\t\t" + "Alder" + "\t\t\t" + "Køn" + "\n");
                         for (int i = 0; i < user.Count; i++)
                         {
                             Console.WriteLine(user[i].userid.ToString() + "\t" + user[i].name.ToString() + "\t" + user[i].age.ToString() + "\t" + user[i].gender.ToString());
