@@ -80,8 +80,10 @@ namespace socialNetwork.Menu
                         break;
 
                     case "2":
-                        List<User> user = Db.select.GetAllUsers();
+                        Console.Clear();
 
+                        List<User> user = Db.select.GetAllUsers();
+                        
                         Console.WriteLine("UserID" + "\t\t\t" + "Nave" + "\t\t\t" + "Alder" + "\t\t\t" + "Køn" + "\n");
                         for (int i = 0; i < user.Count; i++)
                         {
@@ -110,6 +112,7 @@ namespace socialNetwork.Menu
                         break;
 
                     case "6":
+                        Console.Clear();
                         Console.WriteLine("----------");
                         Db.@select.GetAllCircles();
                         Console.WriteLine("Skriv cirkel navn");
@@ -120,6 +123,7 @@ namespace socialNetwork.Menu
                         break;
 
                     case "7":
+                        Console.Clear();
                         var circles = Db.@select.GetAllCircles();
 
                         Console.WriteLine();
@@ -130,6 +134,7 @@ namespace socialNetwork.Menu
                         break;
 
                     case "8":
+                        Console.Clear();
                         Console.WriteLine("-----------");
                         var users = selects.GetAllUsers();
                         foreach (var luser in users)
@@ -157,6 +162,7 @@ namespace socialNetwork.Menu
                         break;
 
                     default:
+                        Console.Clear();
                         Console.WriteLine("Forkert indtastning");
                         MenuValg = "mainMenu";
                         Console.WriteLine("Tryk enter for at forsætte");
