@@ -177,8 +177,6 @@ namespace socialNetwork.Menu
         public void LogOff()
         {
             userId = "";
-
-            //Se user eksistere... ellers break;
         }
     }
 }
