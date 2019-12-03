@@ -67,6 +67,20 @@ namespace socialNetwork.Menu
                         string kon = Console.ReadLine();
                         try
                         {
+                            //List<User> user = Db.select.GetAllUsers();
+
+                            //for (int i = 0; i < user.Count; i++)
+                            //{
+                            //    if (user[i].userid == userName && i < user.Count)
+                            //    {
+                            //        userId = "";
+                            //        Console.WriteLine("Brugeren eksisterede ikke! Logger automatisk ud igen.");
+                            //        Console.WriteLine("Tryk enter for at forsætte");
+                            //        Console.ReadLine();
+                            //        break;
+                            //    }
+                            //}
+
                             insert.createUser(userName, Name, age, kon);
                         }
                         catch (Exception)
@@ -180,7 +194,7 @@ namespace socialNetwork.Menu
 
             for (int i = 0; i < user.Count; i++)
             {
-                if (!user[i].userid == userId && i < user.Count)
+                if (!(user[i].userid == userId) && i < user.Count)
                 {
                     userId = "";
                     Console.WriteLine("Brugeren eksisterede ikke! Logger automatisk ud igen.");
