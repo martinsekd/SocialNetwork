@@ -95,7 +95,19 @@ namespace socialNetwork.Menu
                         var blockUser = Console.ReadLine();
                         var userIns = Db.@select.GetUser(UserId);
                         var blockUserIns = Db.@select.GetUser(blockUser);
-                        Db.insert.addBlockedUser(userIns,blockUserIns);
+                        
+                        try
+                        {
+                            Db.insert.addBlockedUser(userIns, blockUserIns);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Brugeren eksistere ikke");
+                        }
+
+                        Console.WriteLine("Tryk enter for at forsætte");
+                        Console.ReadLine();
+
                         MenuValg = "mainMenu";
                         break;
 
@@ -109,6 +121,7 @@ namespace socialNetwork.Menu
                     case "6":
                         Console.Clear();
                         Db.select.GetPostsFromFeed(UserId);
+                        Console.WriteLine("Tryk enter for at forsætte");
                         Console.ReadLine();
                         MenuValg = "mainMenu";
                         break;

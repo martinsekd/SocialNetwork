@@ -47,7 +47,7 @@ namespace socialNetwork
             foreach (var post in posts)
             {
                 Console.WriteLine(post.title);
-                Console.WriteLine("Skrevet af: "+post.author.name);
+                Console.WriteLine("Skrevet af: "+post.author.userid);
                 Console.WriteLine(post.description);
                 Console.WriteLine("Video: "+post.url);
                 Console.WriteLine("--------");
@@ -70,7 +70,7 @@ namespace socialNetwork
             foreach (var post in posts)
             {
                 Console.WriteLine(post.title);
-                Console.WriteLine("Skrevet af: " + post.author.name);
+                Console.WriteLine("Skrevet af: " + post.author.userid);
                 Console.WriteLine(post.description);
                 Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
