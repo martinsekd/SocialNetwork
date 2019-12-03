@@ -36,6 +36,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("(2): Lav en post");
                         Console.WriteLine("(4): Bloker bruger");
                         Console.WriteLine("(5): Se blokerede brugere");
+                        Console.WriteLine("(6): Se mit feed");
                         Console.WriteLine("(3):tilbage til main");
                         Console.WriteLine("---------------------------------");
                         
@@ -108,6 +109,11 @@ namespace socialNetwork.Menu
                         break;
                     case "5":
                         Db.select.GetBlockedUsers(UserId);
+                        Console.ReadLine();
+                        MenuValg = "mainMenu";
+                        break;
+                    case "6":
+                        Db.select.GetPostsFromFeed(UserId);
                         Console.ReadLine();
                         MenuValg = "mainMenu";
                         break;
