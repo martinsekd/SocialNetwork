@@ -5,22 +5,41 @@
 //////////////MenuMyProfil
 //////////////- Kan vise ens egens væg med post
 //////////////- Kan skrive post på ens egenvæg
+//////////////- Kan fjerne en post fra ens væg
 
 //////////////MenuFriends
 //////////////- Kan vise en list af dine venner
+//////////////- Kan tilføje en ven til dine venner
+//////////////- Kan gå til en vens væg
+//////////////- Kan tilføje en ny cirkel
+//////////////- Kan fjerne en cirkel
 //////////////- Kan tilføje venner til cirkel
 //////////////- Kan fjerne venner fra cirkel
-//////////////- Kan gå til en vens væg
 
 //////////////MenuFriendsWall
 //////////////- Kan vise en vens væg med hans post
 //////////////- Kan skrive kommentar på en vens post
 
+//////////////MenuUserWall
+//////////////- Kan vise post for alle venner i en cirkel
+//////////////- Kan skrive kommentar på post fra en cirkel
+
 //////////////MenuPublicWall
 //////////////- Kan se alle bruger som du ikke er blokeret for. Deres posts.
 //////////////- Kan skrive kommentar på en en post
+///
+///
+///FORSLAG istedet for MenuUserWall
+///
+/// 
+//////////////MenuCirkel
+//////////////- Kan tilføje en ny cirkel
+//////////////- Kan fjerne en cirkel
+//////////////- Kan tilføje venner til cirkel
+//////////////- Kan fjerne venner fra cirkel
+//////////////- Kan gå til en cirkel
 
-//////////////MenuUserWall
+//////////////MenuCirkelWall
 //////////////- Kan vise post for alle venner i en cirkel
 //////////////- Kan skrive kommentar på post fra en cirkel
 
