@@ -176,7 +176,19 @@ namespace socialNetwork.Menu
             Console.WriteLine("Skriv min brugers id");
             userId = Console.ReadLine();
 
-            //Se user eksistere... ellers break;
+            List<User> user = Db.select.GetAllUsers();
+
+            for (int i = 0; i < user.Count; i++)
+            {
+                if (!user[i].userid == userId && i < user.Count)
+                {
+                    userId = "";
+                    Console.WriteLine("Brugeren eksisterede ikke! Logger automatisk ud igen.");
+                    Console.WriteLine("Tryk enter for at forsætte");
+                    Console.ReadLine();
+                    break;
+                }
+            }
         }
 
         public void LogOff()

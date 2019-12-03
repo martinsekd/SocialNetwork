@@ -24,6 +24,12 @@ namespace socialNetwork
 
         private void InsertDummyData()
         {
+            //Cirkler
+            insert.createCircle("Public");
+            insert.createCircle("Lystrup-Slænget");
+            insert.createCircle("Aarhus-Universitet");
+
+
             // Users
             insert.createUser("AndreasAHN", "Andreas Hervert Nielsen", 25, "M");
             insert.createUser("DerpEtte", "Marie Unmack Bærentzen", 22, "K");
@@ -34,11 +40,6 @@ namespace socialNetwork
             insert.createUser("TheFlipFlop", "Nanna Hougaard", 25, "K");
             insert.createUser("AK47", "Anne-Katrine Japhetson Mortensen", 24, "K");
             insert.createUser("Grisen523", "Magnus Japhetson Mortensen", 24, "M");
-
-            //Cirkler
-            insert.createCircle("Public");
-            insert.createCircle("Lystrup-Slænget");
-            insert.createCircle("Aarhus-Universitet");
 
             //Add all users to Public cirkel
             List<User> user = Db.select.GetAllUsers();
