@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace socialNetwork.Menu
 {
@@ -75,7 +74,7 @@ namespace socialNetwork.Menu
                                 {
                                     userId = "";
                                     Console.WriteLine("Brugeren eksisterede allerede i systemet!");
-                                    Console.WriteLine("Tryk enter for at forsætte");
+                                    Console.WriteLine("\n\nTryk enter for at forsætte");
                                     Console.ReadLine();
                                     break;
                                 }
@@ -88,7 +87,7 @@ namespace socialNetwork.Menu
                         catch (Exception)
                         {
                             Console.WriteLine("Fejled I at skrive til database");
-                            Console.WriteLine("Tryk enter for at forsætte");
+                            Console.WriteLine("\n\nTryk enter for at forsætte");
                             Console.ReadLine();
                         }
                         MenuValg = "mainMenu";
@@ -102,10 +101,10 @@ namespace socialNetwork.Menu
                         Console.WriteLine("UserID" + "\t\t\t" + "Navn" + "\t\t\t" + "Alder" + "\t\t\t" + "Køn" + "\n");
                         for (int i = 0; i < user.Count; i++)
                         {
-                            Console.WriteLine(user[i].userid.ToString() + "\t" + user[i].name.ToString() + "\t" + user[i].age.ToString() + "\t" + user[i].gender.ToString());
+                            Console.WriteLine(user[i].userid.ToString() + "\t" + user[i].name.ToString() + "\t\t" + user[i].age.ToString() + "\t\t\t" + user[i].gender.ToString());
                         }
 
-                        Console.WriteLine("Tryk enter for at forsætte");
+                        Console.WriteLine("\n\nTryk enter for at forsætte");
                         Console.ReadLine();
                         MenuValg = "mainMenu";
                         break;
@@ -180,7 +179,7 @@ namespace socialNetwork.Menu
                         Console.Clear();
                         Console.WriteLine("Forkert indtastning");
                         MenuValg = "mainMenu";
-                        Console.WriteLine("Tryk enter for at forsætte");
+                        Console.WriteLine("\n\nTryk enter for at forsætte");
                         Console.ReadLine();
                         break;
                 }
@@ -204,7 +203,7 @@ namespace socialNetwork.Menu
                 {
                     userId = "";
                     Console.WriteLine("Brugeren eksisterede ikke! Logger automatisk ud igen.");
-                    Console.WriteLine("Tryk enter for at forsætte");
+                    Console.WriteLine("\n\nTryk enter for at forsætte");
                     Console.ReadLine();
                     break;
                 }

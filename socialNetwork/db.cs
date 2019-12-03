@@ -1,9 +1,7 @@
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
 
 namespace socialNetwork
 {
@@ -21,7 +19,7 @@ namespace socialNetwork
             ///***************/////
             /// Indsæt egen connectionstreng og egen tomme database.
             var client = new MongoClient("mongodb://127.0.0.1:27017");
-            var database = client.GetDatabase("SocialNetwork2");
+            var database = client.GetDatabase("SocialNetwork3");
             ///***************//////
             users = database.GetCollection<User>("User");
             posts = database.GetCollection<Post>("Post");

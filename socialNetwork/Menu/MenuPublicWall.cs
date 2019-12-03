@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace socialNetwork.Menu
 {
@@ -44,7 +42,7 @@ namespace socialNetwork.Menu
                     case "1":
                         Console.Clear();
                         Db.@select.GetPostFromPublicWall(UserId);
-                        Console.WriteLine("Tryk enter for at forsætte");
+                        Console.WriteLine("\n\nTryk enter for at forsætte");
                         Console.ReadLine();
                         MenuValg = "mainMenu";
                         break;
@@ -65,7 +63,7 @@ namespace socialNetwork.Menu
                         catch (Exception)
                         {
                             Console.WriteLine("Fejled I at skrive til database");
-                            Console.WriteLine("Tryk enter for at forsætte");
+                            Console.WriteLine("\n\nTryk enter for at forsætte");
                             Console.ReadLine();
                         }
                         MenuValg = "mainMenu";
@@ -79,7 +77,7 @@ namespace socialNetwork.Menu
                         Console.Clear();
                         Console.WriteLine("Forkert indtastning");
                         MenuValg = "mainMenu";
-                        Console.WriteLine("Tryk enter for at forsætte");
+                        Console.WriteLine("\n\nTryk enter for at forsætte");
                         Console.ReadLine();
                         break;
                 }
