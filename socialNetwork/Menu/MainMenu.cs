@@ -8,8 +8,6 @@
 //////////////- Kan fjerne en post fra ens væg
 
 //////////////MenuFriends
-//////////////- Kan vise en list af dine venner
-//////////////- Kan tilføje en ven til dine venner
 //////////////- Kan gå til en vens væg
 //////////////- Kan tilføje en ny cirkel
 //////////////- Kan fjerne en cirkel
@@ -89,12 +87,12 @@ namespace socialNetwork.Menu
                             Console.WriteLine("(5): Min profil");
                             Console.WriteLine("(6): Venner");
                             Console.WriteLine("(6): Tilføj til cirkel");
-                            Console.WriteLine("(0): Tilføj ny cirkel");
-                            Console.WriteLine("(7): Users wall");
-                            Console.WriteLine("(8): Public wall");
+                            Console.WriteLine("(7): Tilføj ny cirkel");
+                            Console.WriteLine("(8): Users wall");
+                            Console.WriteLine("(9): Public wall");
                         }
                         
-                        Console.WriteLine("(9): Exit program");
+                        Console.WriteLine("(0): Exit program");
                         Console.WriteLine("---------------------------------");
 
                         MenuValg = Console.ReadLine();
@@ -166,6 +164,16 @@ namespace socialNetwork.Menu
                         break;
 
                     case "7":
+                        var circles = Db.@select.GetAllCircles();
+
+                        Console.WriteLine();
+                        Console.WriteLine("Skriv et nyt cirkelnavn:");
+                        var cname = Console.ReadLine();
+                        Db.insert.createCircle(cname);
+                        MenuValg = "mainMenu";
+                        break;
+
+                    case "8":
                         Console.WriteLine("-----------");
                         var users = selects.GetAllUsers();
                         foreach (var luser in users)
@@ -181,26 +189,17 @@ namespace socialNetwork.Menu
                         
                         break;
 
-                    case "8":
+                    case "9":
                         MenuPublicWall menuPublicWall = new MenuPublicWall(userId);
                         menuPublicWall.StartMenu();
                         MenuValg = "mainMenu";
                         break;
 
 
-                    case "9":
+                    case "0":
                         Runner = false;
                         break;
 
-                    case "0":
-                        var circles = Db.@select.GetAllCircles();
-                        
-                        Console.WriteLine();
-                        Console.WriteLine("Skriv et nyt cirkelnavn:");
-                        var cname = Console.ReadLine();
-                        Db.insert.createCircle(cname);
-                        MenuValg = "mainMenu";
-                        break;
                     default:
                         Console.WriteLine("Forkert indtastning");
                         MenuValg = "mainMenu";
