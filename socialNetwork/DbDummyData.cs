@@ -16,7 +16,7 @@ namespace socialNetwork
 
             List<User> user = Db.select.GetAllUsers();
 
-            if (user.Count() == 0)
+            if (user.Count == 0)
                 InsertDummyData();
         }
 
