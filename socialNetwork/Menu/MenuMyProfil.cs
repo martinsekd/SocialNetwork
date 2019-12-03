@@ -46,7 +46,6 @@ namespace socialNetwork.Menu
                         break;
 
                     case "1":
-                        // Vis min egen væg
                         Db.@select.GetPostsFromAuthor(UserId);
                         Console.WriteLine("Tryk enter for at forsætte");
                         Console.ReadLine();
@@ -69,18 +68,6 @@ namespace socialNetwork.Menu
                             var user = Db.@select.GetUser(UserId);
                             var circle = Db.@select.GetCircle(circleName);
                             Db.insert.createPost(postTitle, postContent, postUrl, user, circle);
-                            
-                            //Circle circle = new Circle();
-                            //Post post = new Post();
-                            //post.id = ObjectId.GenerateNewId((int)DateTime.Now.ToFileTime()).ToString();
-                            //post.description = postContent;
-                            //post.title = postTitle;
-                            //post.url = postUrl;
-                            //post.created = DateTime.Now;
-                            //post.circle = circle;
-                            //post.comments = new System.Collections.Generic.List<Comment>();
-
-                            // lav en post
                         }
                         catch (Exception)
                         {

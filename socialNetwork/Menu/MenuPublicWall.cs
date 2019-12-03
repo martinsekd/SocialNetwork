@@ -42,7 +42,6 @@ namespace socialNetwork.Menu
                         break;
 
                     case "1":
-                        //Vis seneste post 
                         Db.@select.GetPostFromPublicWall(UserId);
                         Console.WriteLine("Tryk enter for at forsætte");
                         Console.ReadLine();
