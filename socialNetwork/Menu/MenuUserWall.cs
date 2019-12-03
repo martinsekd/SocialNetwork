@@ -44,15 +44,15 @@ namespace socialNetwork.Menu
                         break;
 
                     case "1":
-                        //Vis seneste post 
+                        Console.Clear();
                         Db.@select.GetPostsFromWall(UserId, GuestId);
-
                         Console.WriteLine("Tryk enter for at forsætte");
                         Console.ReadLine();
                         MenuValg = "mainMenu";
                         break;
 
                     case "2":
+                        Console.Clear();
                         Console.Write("Skriv titel på Post: ");
                         string titel = Console.ReadLine();
                         Console.Write("Skriv kommentar til Post: ");
@@ -78,6 +78,7 @@ namespace socialNetwork.Menu
                         break;
 
                     default:
+                        Console.Clear();
                         Console.WriteLine("Forkert indtastning");
                         MenuValg = "mainMenu";
                         Console.WriteLine("Tryk enter for at forsætte");

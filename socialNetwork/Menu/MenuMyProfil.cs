@@ -37,7 +37,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("(4): Bloker bruger");
                         Console.WriteLine("(5): Se blokerede brugere");
                         Console.WriteLine("(6): Se mit feed");
-                        Console.WriteLine("(3):tilbage til main");
+                        Console.WriteLine("(3): Tilbage til main");
                         Console.WriteLine("---------------------------------");
                         
                         MenuValg = Console.ReadLine();
@@ -46,6 +46,7 @@ namespace socialNetwork.Menu
                         break;
 
                     case "1":
+                        Console.Clear();
                         Db.@select.GetPostsFromAuthor(UserId);
                         Console.WriteLine("Tryk enter for at forsætte");
                         Console.ReadLine();
@@ -53,6 +54,7 @@ namespace socialNetwork.Menu
                         break;
 
                     case "2":
+                        Console.Clear();
                         Console.Write("Skriv Post Title: ");
                         string postTitle = Console.ReadLine();
                         Console.Write("Skriv Post beskrivelse: ");
@@ -82,7 +84,9 @@ namespace socialNetwork.Menu
                         Runner = false;
                         MenuValg = "mainMenu";
                         break;
+
                     case "4":
+                        Console.Clear();
                         Db.select.GetBlockedUsers(UserId);
                         Console.WriteLine("------------");
                         Db.@select.GetAllUsers();
@@ -94,17 +98,23 @@ namespace socialNetwork.Menu
                         Db.insert.addBlockedUser(userIns,blockUserIns);
                         MenuValg = "mainMenu";
                         break;
+
                     case "5":
+                        Console.Clear();
                         Db.select.GetBlockedUsers(UserId);
                         Console.ReadLine();
                         MenuValg = "mainMenu";
                         break;
+
                     case "6":
+                        Console.Clear();
                         Db.select.GetPostsFromFeed(UserId);
                         Console.ReadLine();
                         MenuValg = "mainMenu";
                         break;
+
                     default:
+                        Console.Clear();
                         Console.WriteLine("Forkert indtastning");
                         MenuValg = "mainMenu";
                         Console.WriteLine("Tryk enter for at forsætte");
