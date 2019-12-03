@@ -86,7 +86,7 @@ namespace socialNetwork
             return posts;
         }
 
-        public List<string> seeBlockedUsers(string userid)
+        public List<string> GetBlockedUsers(string userid)
         {
             var user = Db.users.Find(u => u.userid == userid).First();
             var blocked = user.blocked;
@@ -103,9 +103,9 @@ namespace socialNetwork
             var guest = GetUser(guestid);
             //var posts = Db.posts.Find(p => user.circles.Contains(p.circle) && ).ToList();
             var posts = Db.posts
-                .Find(p => p.author.userid.Equals(guestid) &&
-                           (p.circle.members.Contains(userid) || p.circle.name.Equals("Public")) &&
-                           !p.author.blocked.Contains(userid)).SortByDescending(p => p.created).Limit(5).ToList();
+                .Find(p => p.author.userid.Equals(userid) &&
+                           (p.circle.members.Contains(guestid) || p.circle.name.Equals("Public")) &&
+                           !p.author.blocked.Contains(guestid)).SortByDescending(p => p.created).Limit(10).ToList();
             
             foreach (var post in posts)
             {

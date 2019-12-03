@@ -63,11 +63,15 @@ namespace socialNetwork
             var update = Builders<Circle>.Update.Push(c => c.members, user.userid);
             Db.circles.FindOneAndUpdate(filter, update);
 
+            var userFilter = Builders<User>.Filter.Eq("id", user.id);
+            var userUpdate = Builders<User>.Update.Push(u => u.circles, circle);
+            Db.users.FindOneAndUpdate(userFilter, userUpdate);
+
         }
 
         public void addBlockedUser(User user, User blockedUser)
         {
-            var filter = Builders<User>.Filter.Eq("id", user.userid);
+            var filter = Builders<User>.Filter.Eq("userid", user.userid);
             var update = Builders<User>.Update.Push(u => u.blocked, user.userid);
             Db.users.FindOneAndUpdate(filter, update);
         }

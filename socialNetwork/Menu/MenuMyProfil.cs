@@ -34,6 +34,8 @@ namespace socialNetwork.Menu
                         Console.WriteLine("---------------------------------");
                         Console.WriteLine("(1): Se min væg");
                         Console.WriteLine("(2): Lav en post");
+                        Console.WriteLine("(4): Bloker bruger");
+                        Console.WriteLine("(5): Se blokerede brugere");
                         Console.WriteLine("(3):tilbage til main");
                         Console.WriteLine("---------------------------------");
                         
@@ -92,7 +94,23 @@ namespace socialNetwork.Menu
                         Runner = false;
                         MenuValg = "mainMenu";
                         break;
-
+                    case "4":
+                        Db.select.GetBlockedUsers(UserId);
+                        Console.WriteLine("------------");
+                        Db.@select.GetAllUsers();
+                        Console.WriteLine("------------");
+                        Console.WriteLine("Skriv en bruger at blokere");
+                        var blockUser = Console.ReadLine();
+                        var userIns = Db.@select.GetUser(UserId);
+                        var blockUserIns = Db.@select.GetUser(blockUser);
+                        Db.insert.addBlockedUser(userIns,blockUserIns);
+                        MenuValg = "mainMenu";
+                        break;
+                    case "5":
+                        Db.select.GetBlockedUsers(UserId);
+                        Console.ReadLine();
+                        MenuValg = "mainMenu";
+                        break;
                     default:
                         Console.WriteLine("Forkert indtastning");
                         MenuValg = "mainMenu";
