@@ -72,7 +72,7 @@ namespace socialNetwork
         public void addBlockedUser(User user, User blockedUser)
         {
             var filter = Builders<User>.Filter.Eq("userid", user.userid);
-            var update = Builders<User>.Update.Push(u => u.blocked, user.userid);
+            var update = Builders<User>.Update.Push(u => u.blocked, blockedUser.userid);
             Db.users.FindOneAndUpdate(filter, update);
         }
     }
