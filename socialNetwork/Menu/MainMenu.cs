@@ -196,7 +196,11 @@ namespace socialNetwork.Menu
 
             for (int i = 0; i < user.Count; i++)
             {
-                if ((string.Compare(user[i].userid, userId) != 0) && (i > user.Count))
+                if (string.Compare(user[i].userid, userId) == 0)
+                {
+                    break;
+                }
+                else if ((string.Compare(user[i].userid, userId) != 0) && (i == user.Count - 1))
                 {
                     userId = "";
                     Console.WriteLine("Brugeren eksisterede ikke! Logger automatisk ud igen.");
