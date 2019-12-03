@@ -161,9 +161,9 @@ namespace socialNetwork
             var user = GetUser(userid);
             //var posts = Db.posts.Find(p => user.circles.Contains(p.circle) && ).ToList();
             var posts = Db.posts
-                .Find(p => p.author.userid == userid &&
+                .Find(p => p.author.userid == userid ||
                            (p.circle.members.Contains(userid) || p.circle.Equals("Public")) &&
-                           p.author.blocked.Contains(userid)).SortByDescending(p => p.created).Limit(5).ToList();
+                           !p.author.blocked.Contains(userid)).SortByDescending(p => p.created).Limit(5).ToList();
 
             foreach (var post in posts)
             {
