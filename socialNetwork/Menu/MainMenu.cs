@@ -144,7 +144,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("-------");
                         Console.WriteLine("Skriv brugerid for ønsket besøg");
                         string guestid = Console.ReadLine();
-                        MenuUserWall menuUserWall = new MenuUserWall(userId,guestid);
+                        MenuUserWall menuUserWall = new MenuUserWall(guestid,userId);
                         menuUserWall.StartMenu();
                         MenuValg = "mainMenu";
                         
