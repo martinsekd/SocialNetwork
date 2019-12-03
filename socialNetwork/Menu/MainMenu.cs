@@ -67,21 +67,23 @@ namespace socialNetwork.Menu
                         string kon = Console.ReadLine();
                         try
                         {
-                            //List<User> user = Db.select.GetAllUsers();
+                            List<User> userBuf = Db.select.GetAllUsers();
 
-                            //for (int i = 0; i < user.Count; i++)
-                            //{
-                            //    if (user[i].userid == userName && i < user.Count)
-                            //    {
-                            //        userId = "";
-                            //        Console.WriteLine("Brugeren eksisterede ikke! Logger automatisk ud igen.");
-                            //        Console.WriteLine("Tryk enter for at forsætte");
-                            //        Console.ReadLine();
-                            //        break;
-                            //    }
-                            //}
-
-                            insert.createUser(userName, Name, age, kon);
+                            for (int i = 0; i < userBuf.Count; i++)
+                            {
+                                if (userBuf[i].userid == userName)
+                                {
+                                    userId = "";
+                                    Console.WriteLine("Brugeren eksisterede allerede i systemet!");
+                                    Console.WriteLine("Tryk enter for at forsætte");
+                                    Console.ReadLine();
+                                    break;
+                                }
+                                else if (i < userBuf.Count)
+                                {
+                                    insert.createUser(userName, Name, age, kon);
+                                }
+                            }
                         }
                         catch (Exception)
                         {
@@ -194,7 +196,7 @@ namespace socialNetwork.Menu
 
             for (int i = 0; i < user.Count; i++)
             {
-                if (!(user[i].userid == userId) && i < user.Count)
+                if ((string.Compare(user[i].userid, userId) != 0) && (i > user.Count))
                 {
                     userId = "";
                     Console.WriteLine("Brugeren eksisterede ikke! Logger automatisk ud igen.");
