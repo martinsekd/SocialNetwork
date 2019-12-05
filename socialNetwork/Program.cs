@@ -1,4 +1,5 @@
-﻿using socialNetwork.Menu;
+﻿using System;
+using socialNetwork.Menu;
 
 namespace socialNetwork
 {
@@ -12,6 +13,15 @@ namespace socialNetwork
 
             MainMenu mainMenu = new MainMenu();
             mainMenu.StartMenu();
+
+            Console.WriteLine("\t       -----");
+            Console.WriteLine("\t    ---      ---");
+            Console.WriteLine("\t ---            ---");
+            Console.WriteLine("\t|       I4DAB      |");
+            Console.WriteLine("\t|        GRP2      |");
+            Console.WriteLine("\t ---            ---");
+            Console.WriteLine("\t    ---      ---");
+            Console.WriteLine("\t       -----");
         }
     }
 }

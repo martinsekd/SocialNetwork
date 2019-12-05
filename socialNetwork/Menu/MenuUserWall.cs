@@ -33,7 +33,7 @@ namespace socialNetwork.Menu
                         Console.WriteLine("---------------------------------");
                         Console.WriteLine("(1): Vis seneste post");
                         Console.WriteLine("(2): Skriv kommentar på post");
-                        Console.WriteLine("(3): Tilbage til main");
+                        Console.WriteLine("(0): Tilbage til main");
                         Console.WriteLine("---------------------------------");
 
                         MenuValg = Console.ReadLine();
@@ -71,7 +71,7 @@ namespace socialNetwork.Menu
                         MenuValg = "mainMenu";
                         break;
 
-                    case "3":
+                    case "0":
                         Runner = false;
                         break;
 

@@ -31,10 +31,10 @@ namespace socialNetwork.Menu
                         Console.WriteLine("---------------------------------");
                         Console.WriteLine("(1): Se min væg");
                         Console.WriteLine("(2): Lav en post");
-                        Console.WriteLine("(4): Bloker bruger");
-                        Console.WriteLine("(5): Se blokerede brugere");
-                        Console.WriteLine("(6): Se mit feed");
-                        Console.WriteLine("(3): Tilbage til main");
+                        Console.WriteLine("(3): Bloker bruger");
+                        Console.WriteLine("(4): Se blokerede brugere");
+                        Console.WriteLine("(5): Se mit feed");
+                        Console.WriteLine("(0): Tilbage til main");
                         Console.WriteLine("---------------------------------");
                         
                         MenuValg = Console.ReadLine();
@@ -78,11 +78,6 @@ namespace socialNetwork.Menu
                         break;
 
                     case "3":
-                        Runner = false;
-                        MenuValg = "mainMenu";
-                        break;
-
-                    case "4":
                         Console.Clear();
                         Db.select.GetBlockedUsers(UserId);
                         Console.WriteLine("------------");
@@ -108,18 +103,23 @@ namespace socialNetwork.Menu
                         MenuValg = "mainMenu";
                         break;
 
-                    case "5":
+                    case "4":
                         Console.Clear();
                         Db.select.GetBlockedUsers(UserId);
                         Console.ReadLine();
                         MenuValg = "mainMenu";
                         break;
 
-                    case "6":
+                    case "5":
                         Console.Clear();
                         Db.select.GetPostsFromFeed(UserId);
                         Console.WriteLine("\n\nTryk enter for at forsætte");
                         Console.ReadLine();
+                        MenuValg = "mainMenu";
+                        break;
+
+                    case "0":
+                        Runner = false;
                         MenuValg = "mainMenu";
                         break;
 
