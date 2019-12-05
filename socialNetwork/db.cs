@@ -1,7 +1,4 @@
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using MongoDB.Bson;
 
 namespace socialNetwork
 {
@@ -24,12 +21,6 @@ namespace socialNetwork
             users = database.GetCollection<User>("User");
             posts = database.GetCollection<Post>("Post");
             circles = database.GetCollection<Circle>("Circle");
-
-            
-            
         }
-
-
-        
     }
 }
