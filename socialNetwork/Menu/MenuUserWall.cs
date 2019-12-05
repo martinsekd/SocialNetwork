@@ -27,8 +27,8 @@ namespace socialNetwork.Menu
                 {
                     case "mainMenu": 
                         Console.Clear();
-                        Console.WriteLine("Velkommen til Social Network.");
-                        Console.WriteLine("---------------------------------");
+                        Console.WriteLine("--Velkommen til Social Network---");
+                        Console.WriteLine("--------I4DAB - Gruppe 2---------");
                         Console.WriteLine("Menu: User wall");
                         Console.WriteLine("---------------------------------");
                         Console.WriteLine("(1): Vis seneste post");

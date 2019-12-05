@@ -28,7 +28,8 @@ namespace socialNetwork.Menu
                 {
                     case "mainMenu": // Main Menu
                         Console.Clear();
-                        Console.WriteLine("Velkommen til Social Network.");
+                        Console.WriteLine("--Velkommen til Social Network---");
+                        Console.WriteLine("--------I4DAB - Gruppe 2---------");
                         Console.WriteLine("---------------------------------");
                         Console.WriteLine("(1): Registrer ny bruger");
                         Console.WriteLine("(2): Vis alle bruger");
