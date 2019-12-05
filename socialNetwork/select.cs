@@ -44,10 +44,10 @@ namespace socialNetwork
 
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
-                Console.WriteLine("Skrevet af: "+post.author.userid);
-                Console.WriteLine(post.description);
-                Console.WriteLine("Video: "+post.url);
+                Console.WriteLine("\n" + "Titel: " + post.title);
+                Console.WriteLine("Skrevet af: " + post.author.userid);
+                Console.WriteLine("Beskrivelse: " + post.description);
+                Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 Console.WriteLine("Kommentarer:");
                 foreach (var comment in post.comments)
@@ -67,9 +67,9 @@ namespace socialNetwork
 
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
+                Console.WriteLine("\n" + "Titel: " + post.title);
                 Console.WriteLine("Skrevet af: " + post.author.userid);
-                Console.WriteLine(post.description);
+                Console.WriteLine("Beskrivelse: " + post.description);
                 Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 Console.WriteLine("Kommentarer:");
@@ -104,10 +104,10 @@ namespace socialNetwork
             
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
-                Console.WriteLine("Skrevet af: " + post.author.name);
-                Console.WriteLine(post.description);
-                Console.WriteLine("Video: "+post.url);
+                Console.WriteLine("\n" + "Titel: " + post.title);
+                Console.WriteLine("Skrevet af: " + post.author.userid);
+                Console.WriteLine("Beskrivelse: " + post.description);
+                Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 Console.WriteLine("Kommentarer:");
                 foreach (var comment in post.comments)
@@ -131,9 +131,9 @@ namespace socialNetwork
 
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
-                Console.WriteLine("Skrevet af: " + post.author.name);
-                Console.WriteLine(post.description);
+                Console.WriteLine("\n" + "Titel: " + post.title);
+                Console.WriteLine("Skrevet af: " + post.author.userid);
+                Console.WriteLine("Beskrivelse: " + post.description);
                 Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 if (post.comments != null)
@@ -160,9 +160,9 @@ namespace socialNetwork
 
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
+                Console.WriteLine("\n" + "Titel: " + post.title);
                 Console.WriteLine("Skrevet af: " + post.author.userid);
-                Console.WriteLine(post.description);
+                Console.WriteLine("Beskrivelse: " + post.description);
                 Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 Console.WriteLine("Kommentarer:");

@@ -19,7 +19,7 @@ namespace socialNetwork
             ///***************/////
             /// Indsæt egen connectionstreng og egen tomme database.
             var client = new MongoClient("mongodb://127.0.0.1:27017");
-            var database = client.GetDatabase("SocialNetwork3");
+            var database = client.GetDatabase("SocialNetwork4");
             ///***************//////
             users = database.GetCollection<User>("User");
             posts = database.GetCollection<Post>("Post");
