@@ -44,10 +44,10 @@ namespace socialNetwork
 
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
-                Console.WriteLine("Skrevet af: "+post.author.userid);
-                Console.WriteLine(post.description);
-                Console.WriteLine("Video: "+post.url);
+                Console.WriteLine("\n" + "Titel: " + post.title);
+                Console.WriteLine("Skrevet af: " + post.author.userid);
+                Console.WriteLine("Beskrivelse: " + post.description);
+                Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 Console.WriteLine("Kommentarer:");
                 foreach (var comment in post.comments)
@@ -67,9 +67,9 @@ namespace socialNetwork
 
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
+                Console.WriteLine("\n" + "Titel: " + post.title);
                 Console.WriteLine("Skrevet af: " + post.author.userid);
-                Console.WriteLine(post.description);
+                Console.WriteLine("Beskrivelse: " + post.description);
                 Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 Console.WriteLine("Kommentarer:");
@@ -97,7 +97,6 @@ namespace socialNetwork
         }
         public List<Post> GetPostsFromWall(string userid,string guestid)
         {
-            
             var posts = Db.posts
                 .Find(p => p.author.userid.Equals(userid) &&
                            (p.circle.members.Contains(guestid) || p.circle.name.Equals("Public")) &&
@@ -105,10 +104,10 @@ namespace socialNetwork
             
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
-                Console.WriteLine("Skrevet af: " + post.author.name);
-                Console.WriteLine(post.description);
-                Console.WriteLine("Video: "+post.url);
+                Console.WriteLine("\n" + "Titel: " + post.title);
+                Console.WriteLine("Skrevet af: " + post.author.userid);
+                Console.WriteLine("Beskrivelse: " + post.description);
+                Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 Console.WriteLine("Kommentarer:");
                 foreach (var comment in post.comments)
@@ -132,9 +131,9 @@ namespace socialNetwork
 
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
-                Console.WriteLine("Skrevet af: " + post.author.name);
-                Console.WriteLine(post.description);
+                Console.WriteLine("\n" + "Titel: " + post.title);
+                Console.WriteLine("Skrevet af: " + post.author.userid);
+                Console.WriteLine("Beskrivelse: " + post.description);
                 Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 if (post.comments != null)
@@ -154,8 +153,6 @@ namespace socialNetwork
 
         public List<Post> GetPostsFromFeed(string userid)
         {
-            var user = GetUser(userid);
-            //var posts = Db.posts.Find(p => user.circles.Contains(p.circle) && ).ToList();
             var posts = Db.posts
                 .Find(p => p.author.userid == userid ||
                            (p.circle.members.Contains(userid) || p.circle.Equals("Public")) &&
@@ -163,9 +160,9 @@ namespace socialNetwork
 
             foreach (var post in posts)
             {
-                Console.WriteLine(post.title);
-                Console.WriteLine("Skrevet af: " + post.author.name);
-                Console.WriteLine(post.description);
+                Console.WriteLine("\n" + "Titel: " + post.title);
+                Console.WriteLine("Skrevet af: " + post.author.userid);
+                Console.WriteLine("Beskrivelse: " + post.description);
                 Console.WriteLine("Video: " + post.url);
                 Console.WriteLine("--------");
                 Console.WriteLine("Kommentarer:");
