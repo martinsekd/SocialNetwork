@@ -97,9 +97,7 @@ namespace socialNetwork
         }
         public List<Post> GetPostsFromWall(string userid,string guestid)
         {
-            var user = GetUser(userid);
-            var guest = GetUser(guestid);
-            //var posts = Db.posts.Find(p => user.circles.Contains(p.circle) && ).ToList();
+            
             var posts = Db.posts
                 .Find(p => p.author.userid.Equals(userid) &&
                            (p.circle.members.Contains(guestid) || p.circle.name.Equals("Public")) &&
